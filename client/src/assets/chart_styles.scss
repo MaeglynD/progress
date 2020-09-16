@@ -1,0 +1,72 @@
+.highcharts-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  line-height: normal;
+  z-index: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 8px;
+}
+
+
+.highcharts-background {
+  fill: transparent;
+}
+
+.highcharts-plot-border, .highcharts-plot-background {
+  fill: none;
+}
+
+.highcharts-axis-labels {
+  fill: #E0E0E3;
+  font-size: 10px;
+}
+
+.highcharts-data-label {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.highcharts-grid-axis .highcharts-tick {
+  stroke-width: 0px;
+}
+
+.highcharts-yaxis-grid {
+  stroke-width: 0px;
+}
+.highcharts-grid-line {
+  fill: none;
+  stroke: #707073;
+  stroke-width: 0px;
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 0px;
+}
+
+.highcharts-xaxis{
+	.highcharts-axis-line, .highcharts-tick{
+		stroke-width: 0px;
+	}
+}
+
+.highcharts-container{
+	// margin-left: -8px;
+	width: 100% !important; 
+	height: 100% !important; 
+}
+
+.highcharts-yaxis-labels{
+	transform: translate(0px, -6px);
+}
+
+.highcharts-tooltip{
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.highcharts-title{
+	display: none;
+}

@@ -1,0 +1,510 @@
+$a: #151515;
+$b: #242424;
+$c: #f24069;
+$font-a: #e6e6e6;
+$border: 1px solid $b;
+
+
+*{
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important; 
+}
+
+html{
+	overflow: hidden !important;
+}
+
+body{
+	background: $a;
+	color: $font-a;
+
+	#app{
+		background: inherit;
+
+		.primary--text{
+			color: $c !important;
+			caret-color: $c !important;
+		}
+
+		.v-picker__body > div {
+			width: 100%;
+			padding-bottom: 10px;
+		}
+
+		.l-datasets-menu-dialog{
+			transform: scale(0.62);
+		}
+
+		.l-dialog-datasets{
+			width: unset;
+
+			.v-card__actions{
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.l-datasets-inner-dialog{
+				display: flex;
+				padding: 20px;
+				
+				.l-datasets-data{
+					min-width: 250px;
+					margin-right: 10px;
+					display: flex;
+					flex-direction: column;
+
+					.l-datasets-data-display{
+						height: 284px;
+						background: rgba(0, 0, 0, 0.2);
+						min-width: 280px;
+						border-radius: 4px;
+						overflow-y: scroll;
+						padding: 10px;
+						font-weight: 300;
+						word-spacing: 3px;
+						padding-right: 0;
+						line-height: 1.7;
+						font-size: 13px;
+						overflow-x: hidden;
+						
+						.l-row{
+							position: relative;
+						}
+						
+						.l-a{
+							color: #c8ad30;
+						}
+						
+						.l-b{
+							margin: 0 2px;
+						}
+
+						.l-c{
+							color: #2dada2;
+						}
+
+						.v-btn{
+							position: absolute;
+    						right: 0;
+						}
+					}
+
+					.l-datasets-data-inputs{
+						border-bottom-left-radius: 4px;
+						border-bottom-right-radius: 4px;
+						display: flex;
+						padding-top: 12px;
+
+						.v-label{
+							font-size: 14px;
+						}
+
+						.v-input{
+							font-size: 12px;
+						}
+
+						.l-datasets-input-add{
+							height: unset;
+							width: 88px;
+							margin-left: 12px;
+						}
+					}
+				}
+
+				.l-datasets-datepicker{
+					margin-left: 10px;
+
+					.v-picker__body{
+						width: 330px !important;
+					}
+
+					.v-date-picker-title__date{
+						font-weight: 300;
+    					font-size: 25px;
+					}
+
+					td{
+
+						.v-btn:before{
+							opacity: 0 !important;
+						}
+					}
+
+					.v-date-picker-header__value{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.l-sheet-container{
+
+		.l-sheet{
+			height: 80vh;
+			padding: 25px;
+			background: $b !important;
+			position: relative;
+
+			.l-sheet-loading{
+				height: 2px;
+				position: absolute;
+				left: 0;
+				top: 0px;
+			}
+
+			&.l-analytics-sheet{
+				padding-top: 18px;
+				padding-bottom: 0;
+				padding-right: 8px;
+				display: flex;
+				flex-direction: column;
+				font-weight: 300;
+				
+				.l-analytics-title{
+					height: 50px; 
+					font-size: 16px;
+					margin: 0;
+					padding: 0;
+					padding-right: 17px;
+					
+					label {
+						color: rgba(230, 230, 230, 0.4);
+					}
+
+					.v-input__slot:before{
+						border-color: rgba(230, 230, 230, 0.15);
+					}
+				}
+
+				.v-card__actions{
+					min-height: 60px;
+					padding: 0px;
+					padding-right: 17px;
+				}
+				
+				.l-analytics-content{
+					height: calc(100% - 111px);
+					display: flex;
+					padding-top: 30px;
+					
+					.l-analytics-sub{
+						font-size: 14px;
+						color: $font-a;
+						margin-bottom: 20px;
+					}
+					
+					.l-analytics-a{
+						width: 20%;
+						min-width: 280px;
+						height: 100%;
+						display: flex;
+    					flex-direction: column;
+						// overflow-y: auto;
+
+						.l-analytics-a-inner{
+							overflow-y: auto;
+							height: 100%;
+
+							.l-analytic{
+								position: relative;
+								padding-bottom: 20px;
+
+								.l-edit-input{
+									margin-top: 20px;
+									font-size: 13px;
+									margin-right: 8px;
+
+									.v-label{
+										font-size: 14px;
+									}
+
+									&.a{
+										margin-top: 20px;
+									}
+								}
+
+								&:hover{
+									
+									.l-edit{
+										opacity: 1;
+									}
+								}
+
+								.l-edit{
+									opacity: 0;
+								}
+
+								.l-edit-controls{
+									position: absolute;
+									display: flex;
+									top: 0px;
+									right: 0;
+								}
+
+								.l-point{
+									font-size: 12px;
+									color: rgba(230, 230, 230, 0.4);
+									line-height: 2;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									&:first-child{
+										color: $font-a;
+										font-size: 14px;
+									}
+								}
+
+								.l-checkbox{
+									position: absolute;
+									z-index: 2;
+									right: 4px;
+									top: calc(50% - 12px);
+								}
+							}
+						}
+					}
+
+					.l-analytics-b{
+						height: 100%;
+						width: 80%;
+						padding-left: 10px;
+
+						.l-analytics-chart-container{
+							height: calc(100% - 28px);
+
+							.l-highcharts{
+								height: 100%;
+
+								.highcharts-container{
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.v-card__actions{
+				padding-top: 12px;
+			}
+
+			.l-sheet-title{
+				text-align: center;
+				font-size: 16px;
+				color: $font-a;
+				font-weight: 300;
+				padding: 0px 15px;
+				width: fit-content;
+				background: inherit;
+				margin: auto;
+				position: relative;
+				z-index: 2;
+			}
+
+			.l-line{
+				position: absolute;
+				width: calc(100% - 50px);
+				background: $font-a;
+				height: 1px;
+				opacity: 0.15;
+				margin-top: 12px;
+			}
+
+			.l-sheet-inner{
+				width: 100%;
+				padding: 17px;
+				padding-bottom: 0;
+				height: calc(100% - 62px);
+
+				.l-datasets-list{
+					height: calc(100% - 92px);
+					margin-top: 29px;
+					padding-top: 3px;
+					overflow-y: auto;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+					
+					.l-datasets-list-row{
+						display: flex;
+						align-items: center;
+						transition: 0.2s;
+						margin-bottom: 30px;
+						
+						&.l-add:hover{
+							opacity: 1 !important;
+						}
+
+						.v-input{
+							width: 100%;
+							font-size: 13px;
+
+							.v-label{
+								font-size: 14px;
+							}
+
+							&:not(:nth-child(4)){
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+
+			.l-flex{
+				display: flex;
+				width: 100%;
+				margin-top: 15px;
+
+				.l-search{
+					font-size: 14px;
+				}
+
+				.l-add{
+					height: 48px;
+					background: #424242;
+					width: 48px;
+					border-radius: 4px;
+					margin-left: 10px;
+					display: flex;
+					justify-content: center;
+					cursor: pointer;
+				}
+			}
+
+		}
+	}
+
+	.v-tooltip__content{
+		opacity: 0.9;
+		font-size: 12px;
+		box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	}
+
+	.l-navbar{
+		position: fixed;
+		height: 100%;
+		width: 60px;
+		border-right: $border;
+
+		.l-logo{
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			border-bottom: $border;
+			margin-bottom: 15px;
+		}
+
+		.l-tile{
+			margin: 15px 10px;
+			margin-top: 0;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			border-radius: 2px;
+
+			&:hover{
+				background: $b;
+			}
+		}
+	}
+	
+	.l-main{
+		height: 100vh;
+		margin-left: 60px;
+		overflow-y: auto;
+		
+		&::-webkit-scrollbar-thumb {
+			border-left: 0px solid transparent;
+			background: rgba(255, 255, 255, 0.1);
+		}
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		.l-grid-layout{
+			height: 100%;
+			width: 100%;
+
+			.l-sub{
+				height: 60px;
+				line-height: 50px;
+				padding-left: 15px;
+				font-weight: 300;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				padding-right: 40px;
+
+				.l-grid-item-edit{
+					position: absolute;
+					right: 10px;
+					top: 0px;
+					opacity: 0;
+					transition: 0.2s;
+					will-change: opacity;
+				}
+			}
+
+			.l-chart-container{
+				height: 100%;
+				width: 100%;
+
+				&:hover{
+					.l-grid-item-edit{
+						opacity: 0.7;
+					}
+				}
+			}
+
+			.l-grid-item{
+				background: rgba(255, 255, 255, 0.01);
+				border-radius: 4px;
+				padding: 5px;
+
+				.l-highcharts{
+					// 100% - title height
+					height: calc(100% - 60px);
+					padding-left: 8px;
+				}
+			}
+
+			.vue-grid-placeholder{
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 4px;
+			}
+		}
+	}
+}
+
+.v-btn{
+	letter-spacing: unset !important;
+}
+
+*::-webkit-scrollbar-button {
+	display:none
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+	height: 6px;
+    border-left: 9px solid transparent;
+    background-clip: padding-box;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
